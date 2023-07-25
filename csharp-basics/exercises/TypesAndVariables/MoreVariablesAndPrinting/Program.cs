@@ -4,28 +4,34 @@ namespace MoreVariablesAndPrinting
 {
     class Program
     {
+        public static double HeightInInches { get; private set; }
+        public static double WeightInPounds { get; private set; }
+
         static void Main(string[] args)
         {
-            string myName, myEyes, myTeeth, myHair;
-            int myAge, myHeight, myWeight;
+           
 
-            myName = "Zed A. Shaw";
-            myAge = 35;
-            myHeight = 74;  // inches
-            myWeight = 180; // lbs
-            myEyes = "Blue";
-            myTeeth = "White";
-            myHair = "Brown";
+            string Name = "Zed A. Shaw";
+            int Age = 35;
+            int Height = 74;  
+            int Weight = 180; 
+            string Eyes = "Blue";
+            string Teeth = "White";
+            string Hair = "Brown";
 
-            Console.WriteLine("Let's talk about " + myName + ".");
-            Console.WriteLine("He's " + myHeight + " inches tall.");
-            Console.WriteLine("He's " + myWeight + " pounds heavy.");
+            double HeightInCentimeters = Height * 2.54;
+            double WeightInKilos = Math.Round(Weight * 0.453592, 2);
+
+            Console.WriteLine("Let's talk about " + Name + ".");
+            Console.WriteLine("He's " + HeightInCentimeters + " centimeters tall.");
+            Console.WriteLine("He's " + WeightInKilos + " kilograms heavy.");
             Console.WriteLine("Actually, that's not too heavy.");
-            Console.WriteLine("He's got " + myEyes + " eyes and " + myHair + " hair.");
-            Console.WriteLine("His teeth are usually " + myTeeth + " depending on the coffee.");
+            Console.WriteLine("He's got " + Eyes + " eyes and " + Hair + " hair.");
+            Console.WriteLine("His teeth are usually " + Teeth + " depending on the coffee.");
 
-            Console.WriteLine("If I add " + myAge + ", " + myHeight + ", and " + myWeight
-                               + " I get " + (myAge + myHeight + myWeight) + ".");
+            Console.WriteLine("If I add " + Age + ", " + HeightInCentimeters + " cm, and " + WeightInKilos
+                               + " kg, I get " + (Age + HeightInCentimeters + WeightInKilos) + ".");
+
 
             Console.ReadKey();
         }

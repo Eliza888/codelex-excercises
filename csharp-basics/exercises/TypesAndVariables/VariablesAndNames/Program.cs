@@ -14,10 +14,10 @@ namespace VariablesAndNames
            int Passengers = 90;
 
 
-            int CarsNotDriven = cars - drivers;
-            int CarsDriven = drivers;
-            double CarpoolCapacity = carsDriven * SeatsInCar;
-            double AveragePassengersPerCar = Math.Round((double)passengers / carsDriven, 2);
+            int CarsNotDriven = Cars - Drivers;
+            int CarsDriven = Drivers;
+            double CarpoolCapacity = CarsDriven * SeatsInCar;
+            double AveragePassengersPerCar = Math.Round((double)Passengers / CarsDriven, 2);
 
 
             Console.WriteLine("There are " + Cars + " cars available.");
