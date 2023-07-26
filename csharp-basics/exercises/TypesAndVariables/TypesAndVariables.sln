@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VariablesAndNames", "Variab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "sandbox", "sandbox\sandbox.csproj", "{F18980C6-11C7-474E-98F1-E8175CF6B19C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{BB74A41A-E84D-412F-9BDC-AD6CBABC36BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F18980C6-11C7-474E-98F1-E8175CF6B19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F18980C6-11C7-474E-98F1-E8175CF6B19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F18980C6-11C7-474E-98F1-E8175CF6B19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB74A41A-E84D-412F-9BDC-AD6CBABC36BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB74A41A-E84D-412F-9BDC-AD6CBABC36BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB74A41A-E84D-412F-9BDC-AD6CBABC36BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB74A41A-E84D-412F-9BDC-AD6CBABC36BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
