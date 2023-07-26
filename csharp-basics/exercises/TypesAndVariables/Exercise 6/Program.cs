@@ -15,7 +15,9 @@ namespace Exercise_6
             for(int i = 0; i < number.Length; i++)
             {
                 sum += int.Parse(number[i].ToString());
+            
             }
+
             Console.WriteLine(sum);
             Console.ReadKey();
         
