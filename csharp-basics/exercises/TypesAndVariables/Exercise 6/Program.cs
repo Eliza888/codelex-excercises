@@ -19,7 +19,6 @@ namespace Exercise_6
             Console.WriteLine(sum);
             Console.ReadKey();
         
-        
         }
     }
 }
