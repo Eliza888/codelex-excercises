@@ -15,9 +15,9 @@ namespace SadFor
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    if (Math.Sqrt(i * i) > 2.5)
+                    if (Math.Sqrt(i) > 2.5)
                     {
-                        Console.WriteLine(i * i);
+                        Console.WriteLine(i);
                     }
                 }
             }

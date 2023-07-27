@@ -9,7 +9,6 @@ namespace MoreVariablesAndPrinting
 
         static void Main(string[] args)
         {
-           
             string name = "Zed A. Shaw";
             int age = 35;
             int height = 74;  
@@ -28,8 +27,7 @@ namespace MoreVariablesAndPrinting
             Console.WriteLine("He's got " + eyes + " eyes and " + hair + " hair.");
             Console.WriteLine("His teeth are usually " + teeth + " depending on the coffee.");
             Console.WriteLine("If I add " + age + ", " + heightInCentimeters + " cm, and " + weightInKilos
-                               + " kg, I get " + (age + heightInCentimeters + weightInKilos) + ".");
-
+                               + " kg, I get " + (age + heightInCentimeters + weightInKilos) + "."
             Console.ReadKey();
         }
     }

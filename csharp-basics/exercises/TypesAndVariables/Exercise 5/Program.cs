@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             string class1 = "English III";
             string class2 = "Precalculus";
             string class3 = "Music Theory";

@@ -6,7 +6,6 @@ namespace VariablesAndNames
     {
         private static void Main(string[] args)
         {
- 
            int cars = 100; 
            double seatsInCar = 4.0;
            int drivers = 28; 
