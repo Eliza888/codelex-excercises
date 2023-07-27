@@ -13,7 +13,6 @@ namespace Casting
 
         static void First()
         {
-           
             string a = "1";
             int b = 2;
             int c = 3;
@@ -22,9 +21,8 @@ namespace Casting
 
             int sum = int.Parse(a) + b + c + (int)d + (int)e;
             Console.WriteLine(sum);
-       
-        }
 
+        }
         static void Second()
         { 
            
@@ -36,8 +34,7 @@ namespace Casting
 
             float sum = float.Parse(a) + b + c + (float)d + e;
             Console.WriteLine(sum);
-
-           
+  
         }
     }
 }
