@@ -62,20 +62,12 @@ namespace CalculateArea
 
         public static void CalculateTriangleArea()
         {
-            decimal ground = 0;
-            decimal height = 0;
-
-            // Get input from user
-
-            // Get the base
             Console.WriteLine("Enter length of the triangle's base? ");
-            ground = decimal.Parse(Console.ReadLine());
+            var ground = decimal.Parse(Console.ReadLine());
 
-            // Get the height
             Console.WriteLine("Enter triangle's height? ");
-            height = decimal.Parse(Console.ReadLine());
+            var height = decimal.Parse(Console.ReadLine());
 
-            // Display the triangle's area.
             Console.WriteLine("The triangle's area is "
                     + Geometry.AreaOfRectangle(ground, height));
         }
