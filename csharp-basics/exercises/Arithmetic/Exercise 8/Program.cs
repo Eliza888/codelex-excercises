@@ -14,7 +14,6 @@
                 Console.WriteLine($"Error: Pay must be at least ${minimumWage} per hour.");
                 return;
             }
-
             if (hoursWorked > maxHoursPerWeek)
             {
                 Console.WriteLine($"Error: Cannot work more than {maxHoursPerWeek} hours.");
@@ -35,6 +34,3 @@
         }
     }
 }
-
-
-

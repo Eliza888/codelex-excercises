@@ -6,7 +6,7 @@ namespace GravityCalculator
     {
         static void Main(string[] args)
         {
-            double gravity = -9.81;  // Earth's gravity in m/s^2
+            double gravity = -9.81;
             double initialVelocity = 0.0;
             double fallingTime = 10.0;
             double initialPosition = 0.0;

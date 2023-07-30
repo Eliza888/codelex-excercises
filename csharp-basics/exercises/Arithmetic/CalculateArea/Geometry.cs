@@ -12,12 +12,10 @@ namespace CalculateArea
         {
             return Math.PI * (double)radius * 2;
         }
-
         public static double AreaOfRectangle(decimal length, decimal width)
         {
             return (double)(length * width);
         }
-
         public static double AreaOfTriangle(decimal ground, decimal h)
         {
             return (double)(ground * h * 0.5m);

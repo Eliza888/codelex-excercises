@@ -23,7 +23,6 @@ namespace Exercise_6
                     output += "Loza";
                 if (i % 7 == 0)
                     output += "Woza";
-
                 if (output == "")
                     output = i.ToString();
 

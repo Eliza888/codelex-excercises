@@ -19,6 +19,3 @@ namespace Exercise1
         }
     }
 }
-
-
-    
