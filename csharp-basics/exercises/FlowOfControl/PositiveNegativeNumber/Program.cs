@@ -1,4 +1,10 @@
-﻿using System;
+﻿using PositiveNegativeNumber;
+using System;
+using System.Diagnostics.Metrics;
+using System.Runtime.Intrinsics.X86;
+using System.Threading.Channels;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PositiveNegativeNumber
 {
@@ -8,21 +14,20 @@ namespace PositiveNegativeNumber
         {
             Console.WriteLine("Enter the number.");
             var input = Console.ReadKey();
-            /*
-            fixme
-            if (?)
+            int number = int.Parse(input.KeyChar.ToString());
+
+            if (number > 0)
             {
                 Console.WriteLine("Number is positive");
-            } 
-            else if (?) 
+            }
+            else if (number < 0)
             {
                 Console.WriteLine("Number is negative");
-            } 
-            else 
+            }
+            else
             {
                 Console.WriteLine("Number is zero");
             }
-            */
         }
     }
 }
