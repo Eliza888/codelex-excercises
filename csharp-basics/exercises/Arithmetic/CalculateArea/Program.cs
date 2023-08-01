@@ -27,14 +27,25 @@ namespace CalculateArea
 
         public static int GetMenu()
         {
-            Console.WriteLine("Geometry Calculator\n");
-            Console.WriteLine("1. Calculate the Area of a Circle");
-            Console.WriteLine("2. Calculate the Area of a Rectangle");
-            Console.WriteLine("3. Calculate the Area of a Triangle");
-            Console.WriteLine("4. Quit\n");
-            Console.WriteLine("Enter your choice (1-4) : ");
-            var keyboard = Console.ReadKey();
-            var userChoice = int.Parse(keyboard.KeyChar.ToString());
+            int userChoice;
+            bool isValidChoice;
+            do
+            {
+                Console.WriteLine("Geometry Calculator\n");
+                Console.WriteLine("1. Calculate the Area of a Circle");
+                Console.WriteLine("2. Calculate the Area of a Rectangle");
+                Console.WriteLine("3. Calculate the Area of a Triangle");
+                Console.WriteLine("4. Quit\n");
+                Console.WriteLine("Enter your choice (1-4) : ");
+
+                isValidChoice = int.TryParse(Console.ReadLine(), out userChoice) &&
+                                userChoice >= 1 && userChoice <= 4;
+
+                if (!isValidChoice)
+                {
+                    Console.WriteLine("Invalid input. Please enter a number between 1 and 4.");
+                }
+            } while (!isValidChoice);
 
             return userChoice;
         }
