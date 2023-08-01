@@ -19,7 +19,6 @@
                 Console.WriteLine("Invalid input. Please enter some text.");
             }
         }
-
         public static string ConvertToDigitsWithNestedIf(string input)
         {
             string result = "";
@@ -46,7 +45,6 @@
             }
             return result;
         }
-
         public static string ConvertToDigitsWithSwitchCase(string input)
         {
             string result = "";
