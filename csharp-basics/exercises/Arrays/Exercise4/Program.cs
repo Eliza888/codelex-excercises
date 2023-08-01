@@ -1,4 +1,6 @@
-﻿namespace Exercise4
+﻿using System;
+
+namespace Exercise4
 {
     class Program
     {
@@ -12,13 +14,18 @@
                 1456, 2265, 1457, 2456
             };
 
-            /*
-            fixme - check if contains number 1245 
-            for (?) {
-                ......
+            int targetValue = 1245;
+
+            bool contains = Array.IndexOf(myArray, targetValue) != -1;
+
+            if (contains)
+            {
                 Console.WriteLine("Contains!");
             }
-            */
+            else
+            {
+                Console.WriteLine("Does not contain!");
+            }
         }
     }
 }
