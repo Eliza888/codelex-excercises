@@ -16,7 +16,7 @@ namespace TenBillion
             }
             else
             {
-                Console.WriteLine("Invalid input. Please enter a valid integer number between ten billion.");
+                Console.WriteLine("Invalid input. Please enter a valid integer number between - and + ten billion.");
             }
         }
     }
