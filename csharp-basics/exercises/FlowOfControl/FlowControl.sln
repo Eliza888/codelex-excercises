@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenBillion", "TenBillion\Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetTheCentury", "GetTheCentury\GetTheCentury.csproj", "{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9ED57C8C-E705-4196-BAAF-7F676FC73883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9ED57C8C-E705-4196-BAAF-7F676FC73883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 7", "Exercise 7\Exercise 7.csproj", "{F79E7E85-F766-498F-8585-C2904CFFD94B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
