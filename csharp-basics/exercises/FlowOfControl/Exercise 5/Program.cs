@@ -9,7 +9,7 @@
 
             if (!string.IsNullOrEmpty(input))
             {
-                input = input.ToLower(); // Convert input to lowercase
+                input = input.ToLower();
 
                 Console.WriteLine("Using Nested If: " + ConvertToDigitsWithNestedIf(input));
                 Console.WriteLine("Using Switch-Case-Default: " + ConvertToDigitsWithSwitchCase(input));
