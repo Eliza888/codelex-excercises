@@ -4,7 +4,6 @@ namespace Exercise5
 {
     class Program
     {
-        //TODO: Write a C# program to find the index of an array element.
         private static void Main(string[] args)
         {
             int[] myArray = { 25, 14, 56, 15, 36, 56, 77, 18, 29, 49 };
@@ -23,7 +22,6 @@ namespace Exercise5
                     indexOfElement29 = i;
                 }
 
-                // If both elements are found, exit the loop early
                 if (indexOfElement36 != -1 && indexOfElement29 != -1)
                 {
                     break;
