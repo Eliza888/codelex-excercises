@@ -13,20 +13,26 @@ namespace PositiveNegativeNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the number.");
-            var input = Console.ReadKey();
-            int number = int.Parse(input.KeyChar.ToString());
+            string input = Console.ReadLine();
 
-            if (number > 0)
+            if (int.TryParse(input, out int number))
             {
-                Console.WriteLine("Number is positive");
-            }
-            else if (number < 0)
-            {
-                Console.WriteLine("Number is negative");
+                if (number > 0)
+                {
+                    Console.WriteLine("Number is positive");
+                }
+                else if (number < 0)
+                {
+                    Console.WriteLine("Number is negative");
+                }
+                else
+                {
+                    Console.WriteLine("Number is zero");
+                }
             }
             else
             {
-                Console.WriteLine("Number is zero");
+                Console.WriteLine("Invalid input. Please enter a valid number.");
             }
         }
     }
