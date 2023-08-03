@@ -16,6 +16,7 @@
             Console.WriteLine($"Computer chooses: {computerMove}");
 
             string result;
+            
             switch (playerMove)
             {
                 case "rock":

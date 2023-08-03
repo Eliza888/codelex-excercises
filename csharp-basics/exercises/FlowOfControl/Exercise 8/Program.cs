@@ -15,6 +15,7 @@
             double number2 = double.Parse(Console.ReadLine());
 
             double result;
+            
             switch (operation)
             {
                 case '+':

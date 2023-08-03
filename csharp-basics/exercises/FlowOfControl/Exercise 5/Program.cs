@@ -19,9 +19,11 @@
                 Console.WriteLine("Invalid input. Please enter some text.");
             }
         }
+       
         public static string ConvertToDigitsWithNestedIf(string input)
         {
             string result = "";
+            
             foreach (char ch in input)
             {
                 if (ch >= 'a' && ch <= 'c')
@@ -43,11 +45,14 @@
                 else
                     result += ch;
             }
+            
             return result;
         }
+        
         public static string ConvertToDigitsWithSwitchCase(string input)
         {
             string result = "";
+            
             foreach (char ch in input)
             {
                 switch (ch)
