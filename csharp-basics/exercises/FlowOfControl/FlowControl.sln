@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositiveNegativeNumber", "PositiveNegativeNumber\PositiveNegativeNumber.csproj", "{A2ABFE79-82C9-44CF-BF0A-A067DAA7A966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PositiveNegativeNumber", "PositiveNegativeNumber\PositiveNegativeNumber.csproj", "{A2ABFE79-82C9-44CF-BF0A-A067DAA7A966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{53E612A0-B352-4B2B-8942-5B7E7097AC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargestNumber", "LargestNumber\LargestNumber.csproj", "{53E612A0-B352-4B2B-8942-5B7E7097AC4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenBillion", "TenBillion\TenBillion.csproj", "{77AB50C0-F0DA-46B0-8299-7AB0B9404B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenBillion", "TenBillion\TenBillion.csproj", "{77AB50C0-F0DA-46B0-8299-7AB0B9404B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetTheCentury", "GetTheCentury\GetTheCentury.csproj", "{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetTheCentury", "GetTheCentury\GetTheCentury.csproj", "{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9ED57C8C-E705-4196-BAAF-7F676FC73883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 7", "Exercise 7\Exercise 7.csproj", "{F79E7E85-F766-498F-8585-C2904CFFD94B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 8", "Exercise 8\Exercise 8.csproj", "{705D3843-E01C-4251-BAAD-1E018B4F1656}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FFBD995-2B38-44A5-BDC8-E1E767E0EFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F03B13C-C9D3-41DD-BD45-08E181E92A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED57C8C-E705-4196-BAAF-7F676FC73883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79E7E85-F766-498F-8585-C2904CFFD94B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705D3843-E01C-4251-BAAD-1E018B4F1656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705D3843-E01C-4251-BAAD-1E018B4F1656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705D3843-E01C-4251-BAAD-1E018B4F1656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705D3843-E01C-4251-BAAD-1E018B4F1656}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

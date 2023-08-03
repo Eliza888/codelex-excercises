@@ -4,7 +4,6 @@ namespace LargestNumber
 {
     class Program
     {
-        //TODO: Write a C# program to to find the largest of three numbers.
         static void Main(string[] args)
         {
             Console.WriteLine("Input the 1st number: ");
@@ -15,13 +14,14 @@ namespace LargestNumber
 
             Console.WriteLine("Input the 3rd number: ");
             var input3 = Console.ReadLine();
-        
-            /*
-            todo - expected output:
-            Input the 1st number: 25
-            Input the 2nd number: 78
-            Input the 3rd number: 87
-             */
+
+            int number1 = int.Parse(input1);
+            int number2 = int.Parse(input2);
+            int number3 = int.Parse(input3);
+
+            int largestNumber = Math.Max(number1, Math.Max(number2, number3));
+
+            Console.WriteLine("The largest number is: " + largestNumber);
         }
     }
 }
