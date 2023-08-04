@@ -23,7 +23,7 @@
             {
                 Console.WriteLine("Guess the word!");    
                 Console.WriteLine($"Word: { wordForDisplay}");
-                Console.WriteLine($"Misses possible - 6: ${missedLetter} ");
+                Console.WriteLine($"Misses possible: 6: ${missedLetter} ");
                 Console.WriteLine();
                 Console.Write($"Guess: ");
                 var input = Console.ReadKey();
