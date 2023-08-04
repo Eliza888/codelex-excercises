@@ -4,7 +4,6 @@ namespace Exercise4
 {
     class Program
     {
-        //TODO: Write a C# program to test if an array contains a specific value.
         private static void Main(string[] args)
         {
             int[] myArray =

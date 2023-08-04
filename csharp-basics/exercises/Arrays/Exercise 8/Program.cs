@@ -41,7 +41,7 @@
                     }
                     else
                     {
-                        Console.WriteLine("\nPlease enter a valid letter.");
+                        Console.WriteLine(" Please enter a valid letter.");
                     }
                 }
 
@@ -51,7 +51,7 @@
                     {
                         if (char.ToLower(word[i]) ==char.ToLower(input.KeyChar))
                         {
-                            wordForDisplay = wordForDisplay.Substring(0, i) + 
+                                wordForDisplay = wordForDisplay.Substring(0, i) + 
                                 word[i] + 
                                 wordForDisplay.Substring(i + 1);
                         }

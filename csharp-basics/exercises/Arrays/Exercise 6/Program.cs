@@ -8,6 +8,7 @@
             int[] array2 = new int[10];
 
             Random random = new Random();
+            
             for (int i = 0; i < array1.Length; i++)
             {
                 array1[i] = random.Next(1, 101);
