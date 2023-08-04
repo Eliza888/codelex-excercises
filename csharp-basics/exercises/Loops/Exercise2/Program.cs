@@ -10,13 +10,17 @@ namespace Exercise2
             
             Console.WriteLine("Input number of terms : ");
             n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
+            
+            Console.WriteLine("Input the base number : ");
+            int baseNumber = Convert.ToInt32(Console.ReadLine());
+
+            int result = 1;
             for (i = 0; i < n; i++)
             {
+                result *= baseNumber;
             }
 
+            Console.WriteLine($"Result: {result}");
             Console.ReadKey();
         }
     }
