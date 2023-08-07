@@ -8,7 +8,7 @@ namespace Exercise_9
         {
             Random random = new Random();
 
-            Console.Write("Desired sum: ");
+            Console.Write("Desired sum (max value of the sum is 12): ");
             int desiredSum = int.Parse(Console.ReadLine());
 
             int rollCount = 0;

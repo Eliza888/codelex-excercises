@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Exercise2
 {
@@ -7,12 +8,12 @@ namespace Exercise2
         static void Main(string[] args)
         {
             int i, n;
-            
+
             Console.WriteLine("Input number of terms : ");
-            n = Convert.ToInt32(Console.ReadLine());
-            
+            n = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Input the base number : ");
-            int baseNumber = Convert.ToInt32(Console.ReadLine());
+            int baseNumber = int.Parse(Console.ReadLine());
 
             int result = 1;
             for (i = 0; i < n; i++)

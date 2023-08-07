@@ -2,7 +2,7 @@
 {
     class AsciiFigure
     {
-        static int SIZE = 55;
+        static int SIZE = 7;
 
         public void Draw()
         {
