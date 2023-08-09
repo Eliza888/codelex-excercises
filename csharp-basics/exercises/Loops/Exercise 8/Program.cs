@@ -2,13 +2,13 @@
 {
     class AsciiFigure
     {
-        static int SIZE = 7;
+        static int size = 7;
 
         public void Draw()
         {
-            for (int i = 0; i < SIZE; i++)
+            for (int i = 0; i < size; i++)
             {
-                for (int j = 0; j < SIZE * 2 - 2 - 2 * i; j++)
+                for (int j = 0; j < size * 2 - 2 - 2 * i; j++)
                 {
                     Console.Write('/');
                 }
@@ -16,7 +16,7 @@
                 {
                     Console.Write('*');
                 }
-                for (int j = 0; j < SIZE * 2 - 2 - 2 * i; j++)
+                for (int j = 0; j < size * 2 - 2 - 2 * i; j++)
                 {
                     Console.Write('\\');
                 }
