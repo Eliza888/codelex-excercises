@@ -32,7 +32,7 @@ namespace FuelConsumptionCalculator
         {
             if (endKilometers == startKilometers)
             {
-                return 0.0; // Avoid division by zero
+                return 0.0;
             }
             return (liters / (endKilometers - startKilometers)) * 100;
         }
