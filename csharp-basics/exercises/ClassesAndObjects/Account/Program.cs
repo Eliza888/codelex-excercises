@@ -6,22 +6,35 @@ namespace Account
     {
         static void Main(string[] args)
         {
-            Account bartosAccount = new Account("Barto's account", 100.00);
-            Account bartosSwissAccount = new Account("Barto's account in Switzerland", 1000000.00);
+            Account firstAccount = new Account("First Account", 100.0);
+            firstAccount.Deposit(20.0);
+            Console.WriteLine(firstAccount);
 
-            Console.WriteLine("Initial state");
-            Console.WriteLine(bartosAccount);
-            Console.WriteLine(bartosSwissAccount);
+            Account mattAccount = new Account("Matt's account", 1000.0);
+            Account myAccount = new Account("My account", 0.0);
 
-            bartosAccount.Withdrawal(20);
-            Console.WriteLine("Barto's account balance is now: " + bartosAccount.Balance());
+            mattAccount.Withdrawal(100.0);
+            myAccount.Deposit(100.0);
 
-            bartosSwissAccount.Deposit(200);
-            Console.WriteLine("Barto's Swiss account balance is now: " + bartosSwissAccount.Balance());
+            Console.WriteLine(mattAccount);
+            Console.WriteLine(myAccount);
 
-            Console.WriteLine("Final state");
-            Console.WriteLine(bartosAccount);
-            Console.WriteLine(bartosSwissAccount);
+            Account accountA = new Account("A", 100.0);
+            Account accountB = new Account("B", 0.0);
+            Account accountC = new Account("C", 0.0);
+
+            Console.WriteLine("Before transfers:");
+            Console.WriteLine(accountA);
+            Console.WriteLine(accountB);
+            Console.WriteLine(accountC);
+
+            Account.Transfer(accountA, accountB, 50.0);
+            Account.Transfer(accountB, accountC, 25.0);
+
+            Console.WriteLine("After transfers:");
+            Console.WriteLine(accountA);
+            Console.WriteLine(accountB);
+            Console.WriteLine(accountC);
         }
     }
 }

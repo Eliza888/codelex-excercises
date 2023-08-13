@@ -38,5 +38,11 @@
         {
             return $"{accountName} balance: {balance:F2}";
         }
+
+        public static void Transfer(Account from, Account to, double howMuch)
+        {
+            from.Withdrawal(howMuch);
+            to.Deposit(howMuch);
+        }
     }
 }
