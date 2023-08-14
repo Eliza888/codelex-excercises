@@ -20,16 +20,20 @@ namespace ListExercise9
 
             var secondList = new List<string>
             {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
+                "Yellow",
+                "Orange",
+                "Blue",
+                "Purple"
             };
 
+            Console.WriteLine("Second List:");
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+
+            List<string> combinedList = new List<string>(firstList);
+            combinedList.AddRange(secondList);
+
+            Console.WriteLine("Joined List:");
+            Console.WriteLine(string.Join(",", combinedList));
         }
     }
 }
