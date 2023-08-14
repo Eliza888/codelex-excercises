@@ -20,22 +20,22 @@ namespace BankAccount
 
         public string ShowUserNameAndBalance()
         {
-            string formattedBalance;
+            string fixedBalance;
 
             if (Balance >= 0)
             {
                 int dollars = (int)Balance;
                 int cents = (int)((Balance - dollars) * 100);
-                formattedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
+                fixedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
             }
             else
             {
                 int dollars = (int)(-Balance);
                 int cents = (int)((-Balance - dollars) * 100);
-                formattedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
+                fixedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
             }
 
-            return Name + ", " + formattedBalance;
+            return Name + ", " + fixedBalance;
         }
     }
 }

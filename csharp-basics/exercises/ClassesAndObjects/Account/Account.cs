@@ -36,7 +36,7 @@
 
         public override string ToString()
         {
-            return $"{accountName} balance: {balance:F2}";
+            return $"{accountName} balance: {balance.ToString("0.00")}";
         }
 
         public static void Transfer(Account from, Account to, double howMuch)

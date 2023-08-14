@@ -6,18 +6,22 @@ namespace Account
     {
         static void Main(string[] args)
         {
-            Account firstAccount = new Account("First Account", 100.0);
-            firstAccount.Deposit(20.0);
-            Console.WriteLine(firstAccount);
+            Account bartoAccount = new Account("Barto's account", 100.0);
+            bartoAccount.Deposit(20.0);
+            Console.WriteLine(bartoAccount);
 
-            Account mattAccount = new Account("Matt's account", 1000.0);
+            Console.WriteLine();
+
+            Account mattsAccount = new Account("Matt's account", 1000.0);
             Account myAccount = new Account("My account", 0.0);
 
-            mattAccount.Withdrawal(100.0);
+            mattsAccount.Withdrawal(100.0);
             myAccount.Deposit(100.0);
 
-            Console.WriteLine(mattAccount);
+            Console.WriteLine(mattsAccount);
             Console.WriteLine(myAccount);
+
+            Console.WriteLine();
 
             Account accountA = new Account("A", 100.0);
             Account accountB = new Account("B", 0.0);

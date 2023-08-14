@@ -11,9 +11,9 @@ namespace FuelConsumptionCalculator
 {
     public class Car
     {
-        private double startKilometers; // Starting odometer reading
-        private double endKilometers; // Ending odometer reading
-        private double liters; // Liters of gas used between the readings
+        private double startKilometers;
+        private double endKilometers;
+        private double liters;
 
         public Car(double startOdo, double endOdo = 0, double gasLiters = 0)
         {

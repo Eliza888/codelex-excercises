@@ -11,13 +11,14 @@
             Student student1 = new Student();
             Student student2 = new Student();
 
-            Console.WriteLine(string.Join(", ", student1.TestsTaken));
+            Console.WriteLine("Student 1 Tests Taken: " + string.Join(", ", student1.TestsTaken));
             student1.TakeTest(paper1, new string[] { "1A", "2D", "3D", "4A", "5A" });
-            Console.WriteLine(string.Join(", ", student1.TestsTaken));
+            Console.WriteLine("Student 1 Tests Taken: " + string.Join(", ", student1.TestsTaken));
 
+            Console.WriteLine("Student 2 Tests Taken: " + string.Join(", ", student2.TestsTaken));
             student2.TakeTest(paper2, new string[] { "1C", "2D", "3A", "4C" });
             student2.TakeTest(paper3, new string[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
-            Console.WriteLine(string.Join(", ", student2.TestsTaken));
+            Console.WriteLine("Student 2 Tests Taken: " + string.Join(", ", student2.TestsTaken));
         }
     }
 }

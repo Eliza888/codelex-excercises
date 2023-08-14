@@ -12,16 +12,17 @@ namespace Exercise_1
         public double Price { get; private set; }
         public int Amount { get; private set; }
 
-        public Product(string name, double priceAtStart, int amountAtStart)
+        public Product(string name, double price, int amount)
         {
             Name = name;
-            Price = priceAtStart;
-            Amount = amountAtStart;
+            Price = price;
+            Amount = amount;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine($"{Name}, price {Price.ToString("F2")} EUR, amount {Amount}");
+            string formattedPrice = Price.ToString("0.00");
+            Console.WriteLine($"{Name}, price {formattedPrice} EUR, amount {Amount}");
         }
 
         public void ChangeQuantity(int newAmount)

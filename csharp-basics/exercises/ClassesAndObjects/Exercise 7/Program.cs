@@ -36,10 +36,10 @@
 
             double totalInterestEarned = savingsAccount.GetBalance() - (startingBalance + totalDeposits - totalWithdrawals);
 
-            Console.WriteLine($"Total deposited: ${totalDeposits:F2}");
-            Console.WriteLine($"Total withdrawn: ${totalWithdrawals:F2}");
-            Console.WriteLine($"Interest earned: ${totalInterestEarned:F2}");
-            Console.WriteLine($"Ending balance: ${savingsAccount.GetBalance():F2}");
+            Console.WriteLine($"Total deposited: ${totalDeposits.ToString("0.00")}");
+            Console.WriteLine($"Total withdrawn: ${totalWithdrawals.ToString("0.00")}");
+            Console.WriteLine($"Interest earned: ${totalInterestEarned.ToString("0.00")}");
+            Console.WriteLine($"Ending balance: ${savingsAccount.GetBalance().ToString("0.00")}");
         }
     }
 }

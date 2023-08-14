@@ -2,7 +2,7 @@
 
 namespace Exercise_6
 {
-    internal class Program
+    internal class DogTest
     {
         static void Main(string[] args)
         {

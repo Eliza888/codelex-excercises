@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_7
 {
-    internal class SavingsAccount
+    class SavingsAccount
     {
         private double balance;
         private double annualInterestRate;

@@ -3,7 +3,7 @@
 namespace VideoStore
 {
 
-    class Program
+    class VideoStoreTest
     {
         private static VideoStore store = new VideoStore();
 
