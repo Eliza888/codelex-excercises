@@ -15,11 +15,7 @@ namespace ListExercise1
             colorsList.Add("Yellow");
             colorsList.Add("Purple");
 
-            Console.WriteLine("Colors in the list:");
-            foreach (var color in colorsList)
-            {
-                Console.WriteLine(color);
-            }
+            Console.WriteLine("Colors have been added to the list.");
         }
     }
 }
