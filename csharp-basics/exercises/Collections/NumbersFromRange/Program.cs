@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,7 +9,6 @@ namespace NumbersFromRange
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var random = new Random();
             var numbers = new List<int>();
             while (numbers.Count() < 10)
@@ -16,7 +16,13 @@ namespace NumbersFromRange
                 numbers.Add(random.Next(1, 100));
             }
 
-            //ToDo: Given an array of integers, write a query that returns list of numbers greater than 30 and less than 100.
+            var filteredNumbers = numbers.Where(num => num > 30 && num < 100).ToList();
+
+            Console.WriteLine("Filtered Numbers:");
+            foreach (var num in filteredNumbers)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
