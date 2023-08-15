@@ -1,4 +1,7 @@
-﻿namespace Exercise_4
+﻿using System;
+using System.Collections.Generic;
+
+namespace Exercise_4
 {
     internal class Program
     {
