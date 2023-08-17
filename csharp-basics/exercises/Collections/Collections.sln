@@ -43,9 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplaceSubstring", "Replace
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniqueValues", "UniqueValues\UniqueValues.csproj", "{0C3C99BF-7B23-4573-B285-2FAE43DA51FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{46CA1ABE-EB6F-4AB5-A38F-9D4E196A1D8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 4", "Exercise 4\Exercise 4.csproj", "{46CA1ABE-EB6F-4AB5-A38F-9D4E196A1D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9F010761-AB8C-4B8F-ACE9-A859E9F46969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise 5", "Exercise 5\Exercise 5.csproj", "{9F010761-AB8C-4B8F-ACE9-A859E9F46969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 10", "Exercise 10\Exercise 10.csproj", "{B278640E-DCEE-478D-B0DD-10DD5DABC1A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,6 +135,10 @@ Global
 		{9F010761-AB8C-4B8F-ACE9-A859E9F46969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F010761-AB8C-4B8F-ACE9-A859E9F46969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F010761-AB8C-4B8F-ACE9-A859E9F46969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B278640E-DCEE-478D-B0DD-10DD5DABC1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B278640E-DCEE-478D-B0DD-10DD5DABC1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B278640E-DCEE-478D-B0DD-10DD5DABC1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B278640E-DCEE-478D-B0DD-10DD5DABC1A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
