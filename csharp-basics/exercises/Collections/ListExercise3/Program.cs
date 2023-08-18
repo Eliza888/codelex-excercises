@@ -18,7 +18,7 @@ namespace ListExercise3
             colors.Insert(0, "Purple");
             colors.Insert(2, "Yellow");
 
-            Console.WriteLine("Updated list with colors inserted:");
+            Console.WriteLine("List with new colors:");
             Console.WriteLine(string.Join(",", colors));
         }
     }

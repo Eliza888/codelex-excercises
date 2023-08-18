@@ -9,8 +9,8 @@ namespace Exercise_5
             int sum = 0;
             while (num > 0)
             {
-                int digit = num % 10;
-                sum += digit * digit;
+                int number = num % 10;
+                sum += number * number;
                 num /= 10;
             }
             return sum;

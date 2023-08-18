@@ -23,7 +23,7 @@ namespace Exercise_10
 
             stringSet.Clear();
 
-            Console.WriteLine("\nItems after clearing the HashSet:");
+            Console.WriteLine("Items after clearing the HashSet:");
             foreach (var item in stringSet)
             {
                 Console.WriteLine(item);

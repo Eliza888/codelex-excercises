@@ -23,7 +23,7 @@ namespace ListExercise6
 
             colors.RemoveAt(2);
 
-            Console.WriteLine("After removing third element from the list:");
+            Console.WriteLine("Removed third element from the list:");
             Console.WriteLine(string.Join(",", colors));
         }
     }

@@ -1,38 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace FlightPlanner
 {
     class Program
     {
+        const string FlightsFilePath = "../../../flights.txt";
+        const string DisplayCitiesOption = "1";
+        const string ExitOption = "#";
+
         static void Main(string[] args)
         {
-            string filePath = "../../../flights.txt";
-            Console.WriteLine("File Path: " + filePath);
-
-            if (!File.Exists(filePath))
-            {
-                Console.WriteLine("File not found.");
-                return;
-            }
-
-            Dictionary<string, List<string>> flightData = ReadFlightData(filePath);
-
-            Console.WriteLine("What would you like to do:");
-            Console.WriteLine("To display list of the cities press 1");
-            Console.WriteLine("To exit program press #");
+            Dictionary<string, List<string>> flightData = ReadFlightData(FlightsFilePath);
 
             while (true)
             {
+                Console.WriteLine("What would you like to do:");
+                Console.WriteLine($"To display list of the cities press {DisplayCitiesOption}");
+                Console.WriteLine($"To exit program press {ExitOption}");
+
                 Console.Write("> ");
                 string input = Console.ReadLine();
 
-                if (input == "1")
+                if (input == DisplayCitiesOption)
                 {
                     DisplayCities(flightData);
                 }
-                else if (input == "#")
+                else if (input == ExitOption)
                 {
                     Console.WriteLine("Exiting program.");
                     break;
@@ -107,29 +103,40 @@ namespace FlightPlanner
 
                 if (nextCity.ToLower() == "exit")
                 {
-                    if (visitedCities.Contains(startCity))
+                    if (visitedCities.Count > 1 && string.Equals(visitedCities[visitedCities.Count - 2], startCity, StringComparison.OrdinalIgnoreCase))
                     {
-                        Console.WriteLine("Round-trip route selected:");
-                        foreach (string city in visitedCities)
-                        {
-                            Console.WriteLine(city);
-                        }
-                        break;
+                        PrintRoundTripRoute(visitedCities);
                     }
                     else
                     {
                         Console.WriteLine("You must select a route that returns to the starting city.");
                     }
+                    break;
                 }
-                else if (destinations.Contains(nextCity))
+                else if (destinations.Contains(nextCity, StringComparer.OrdinalIgnoreCase))
                 {
                     visitedCities.Add(nextCity);
                     currentCity = nextCity;
+
+                    if (currentCity.Equals(startCity, StringComparison.OrdinalIgnoreCase) && visitedCities.Count > 1)
+                    {
+                        PrintRoundTripRoute(visitedCities);
+                        break;
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Invalid destination.");
                 }
+            }
+        }
+
+        static void PrintRoundTripRoute(List<string> visitedCities)
+        {
+            Console.WriteLine("Round-trip route selected:");
+            foreach (string city in visitedCities)
+            {
+                Console.WriteLine(city);
             }
         }
     }
