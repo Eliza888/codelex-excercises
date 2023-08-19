@@ -14,7 +14,7 @@ Create two more classes:
   - Parrot
   - Radio
   
-Then add few instances of each type in the list and make sounds while iterating over them.
+  Then add few instances of each type in the list and make sounds while iterating over them.
 
 # Exercise #3
 
