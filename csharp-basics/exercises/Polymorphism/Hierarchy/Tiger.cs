@@ -1,4 +1,4 @@
-﻿using Hierarchy;
+﻿
 using System;
 
 namespace Hierarchy
@@ -20,9 +20,10 @@ namespace Hierarchy
             return food is Meat;
         }
 
+
         public override string ToString()
         {
-            return $"Tiger[{base.ToString()}]";
+            return $"{GetType().Name}[{base.ToString()}]";
         }
     }
 }

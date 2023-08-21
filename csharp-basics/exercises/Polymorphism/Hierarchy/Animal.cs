@@ -33,5 +33,5 @@ namespace Hierarchy
         }
     }
 
-    // Rest of the Animal subclasses...
+    
 }

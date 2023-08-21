@@ -22,9 +22,10 @@ namespace Hierarchy
             return true;
         }
 
+
         public override string ToString()
         {
-            return $"Cat[{base.ToString()}, {CatBreed}]";
+            return $"{GetType().Name}[{base.ToString()}]";
         }
     }
 }
