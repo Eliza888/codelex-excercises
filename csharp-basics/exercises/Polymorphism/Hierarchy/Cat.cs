@@ -1,16 +1,15 @@
 ﻿using System;
-using System;
 
 namespace Hierarchy
 {
     class Cat : Feline
     {
-        public string Breed { get; }
+        public string CatBreed { get; }
 
         public Cat(string animalName, double animalWeight, string livingRegion, string breed)
             : base(animalName, animalWeight, livingRegion)
         {
-            Breed = breed;
+            CatBreed = breed;
         }
 
         public override void MakeSound()
@@ -25,7 +24,7 @@ namespace Hierarchy
 
         public override string ToString()
         {
-            return $"Cat[{AnimalName}, {Breed}, {AnimalWeight}, {LivingRegion}, {FoodEaten}]";
+            return $"Cat[{base.ToString()}, {CatBreed}]";
         }
     }
 }

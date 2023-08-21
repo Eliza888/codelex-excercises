@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hierarchy;
+using System;
 
 namespace Hierarchy
 {
@@ -17,6 +18,11 @@ namespace Hierarchy
         public override bool WillEatFood(Food food)
         {
             return food is Meat;
+        }
+
+        public override string ToString()
+        {
+            return $"Tiger[{base.ToString()}]";
         }
     }
 }

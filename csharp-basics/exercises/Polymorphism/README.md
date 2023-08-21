@@ -129,7 +129,8 @@ Vegetable 1
 > Tigers are not eating that type of food!
 End
 > Cat[Gray, Persian, 1.1, Home, 4], Tiger[Typcho, 167.7, Asia, 0]
-```
+```Zebra Stripes 400.5 Savannah
+Mouse Squeaky 0.1 Field
 
 ## Exercise #7
 # Vending Machine
