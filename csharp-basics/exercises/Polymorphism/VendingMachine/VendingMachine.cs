@@ -1,45 +1,107 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VendingMachine
 {
     public class VendingMachine : IVendingMachine
     {
-
-        public VendingMachine(string manufacturer)
-        {
-            Manufacturer = manufacturer;
-        }
+        private string _manufacturer;
         private List<Product> _products = new List<Product>();
-        public string Manufacturer { get; }
+        private Money _amount = new Money { Euros = 10, Cents = 0 }; // Initialize to 10.00
 
-        public bool HasProducts { get; }
+        public VendingMachine(string manufacturer, Product[] initialProducts)
+        {
+            _manufacturer = manufacturer;
+            _products.AddRange(initialProducts);
+        }
 
-        public Money Amount { get; }
+        public string Manufacturer => _manufacturer;
+
+        public bool HasProducts => _products.Exists(product => product.Available > 0);
+
+        public Money Amount => _amount;
 
         public Product[] Products => _products.ToArray();
 
         public Money InsertCoin(Money amount)
         {
-            throw new NotImplementedException();
+            if (IsValidCoin(amount))
+            {
+                _amount.Euros += amount.Euros;
+                _amount.Cents += amount.Cents;
+
+                if (_amount.Cents >= 100)
+                {
+                    _amount.Euros += _amount.Cents / 100;
+                    _amount.Cents %= 100;
+                }
+            }
+
+            return _amount;
         }
 
         public Money ReturnMoney()
         {
-            throw new NotImplementedException();
+            Money returnedAmount = new Money
+            {
+                Euros = _amount.Euros,
+                Cents = _amount.Cents
+            };
+
+            _amount.Euros = 0;
+            _amount.Cents = 0;
+
+            return returnedAmount;
         }
 
         public bool AddProduct(string name, Money price, int count)
         {
-            throw new NotImplementedException();
+            if (count <= 0 || _products.Exists(product => product.Name == name))
+            {
+                return false;
+            }
+
+            _products.Add(new Product
+            {
+                Name = name,
+                Price = price,
+                Available = count
+            });
+
+            return true;
         }
 
         public bool UpdateProduct(int productNumber, string name, Money? price, int amount)
         {
-            throw new NotImplementedException();
+            if (productNumber < 0 || productNumber >= _products.Count)
+            {
+                return false;
+            }
+
+            Product productToUpdate = _products[productNumber];
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                productToUpdate.Name = name;
+            }
+
+            if (price.HasValue)
+            {
+                productToUpdate.Price = price.Value;
+            }
+
+            if (amount >= 0)
+            {
+                productToUpdate.Available = amount;
+            }
+
+            return true;
+        }
+
+        private bool IsValidCoin(Money coin)
+        {
+            return coin.Euros >= 0 && (coin.Cents == 10 || coin.Cents == 20 || coin.Cents == 50 ||
+                                       coin.Cents == 0 && (coin.Euros == 1 || coin.Euros == 2));
         }
     }
 }
