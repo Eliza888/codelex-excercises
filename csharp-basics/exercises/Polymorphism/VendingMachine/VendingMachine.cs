@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.ConstrainedExecution;
+using System.Xml.Linq;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VendingMachine
 {
@@ -39,6 +43,7 @@ namespace VendingMachine
 
             return _amount;
         }
+
 
         public Money ReturnMoney()
         {
@@ -102,6 +107,37 @@ namespace VendingMachine
         {
             return coin.Euros >= 0 && (coin.Cents == 10 || coin.Cents == 20 || coin.Cents == 50 ||
                                        coin.Cents == 0 && (coin.Euros == 1 || coin.Euros == 2));
+        }
+
+        public class NotFoundProduct
+        {
+            public string Name { get; } = "Not Found";
+            public Money Price { get; } = new Money();
+            public int Available { get; } = 0;
+        }
+
+        public NotFoundProduct GetNotFoundProduct()
+        {
+            return new NotFoundProduct();
+        }
+
+        public IProduct FindProductByName(string productName)
+        {
+            foreach (var product in _products)
+            {
+                if (string.Equals(product.Name, productName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return new ProductWrapper(product);
+                }
+            }
+
+            // Handle the case when the product is not found
+            return new ProductWrapper(new Product
+            {
+                Name = "Not Found",
+                Price = new Money(),
+                Available = 0
+            });
         }
     }
 }
