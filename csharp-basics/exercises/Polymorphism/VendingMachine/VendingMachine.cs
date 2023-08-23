@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.ConstrainedExecution;
 using System.Xml.Linq;
+using VendingMachine;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace VendingMachine
@@ -119,6 +120,26 @@ namespace VendingMachine
         public NotFoundProduct GetNotFoundProduct()
         {
             return new NotFoundProduct();
+        }
+
+        public bool TryDecrementProductAvailability(string productName)
+        {
+            for (int i = 0; i < _products.Count; i++)
+            {
+                if (_products[i].Name == productName)
+                {
+                    _products[i] = new Product
+                    {
+                        Name = _products[i].Name,
+                        Price = _products[i].Price,
+                        Available = _products[i].Available - 1
+                    };
+                    return true;
+                }
+            }
+
+            Console.WriteLine("Product not found in the list.");
+            return false;
         }
 
         public IProduct FindProductByName(string productName)
