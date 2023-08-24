@@ -23,9 +23,9 @@ namespace PhoneBook
 
         public void PutNumber(string name, string number)
         {
-            if (name == null || number == null)
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(number))
             {
-                throw new Exception("name and number cannot be null");
+                throw new Exception("name and number cannot be null or empty");
             }
 
             if (_data.ContainsKey(name))

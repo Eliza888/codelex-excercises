@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DecryptNumber
 {
@@ -17,36 +18,29 @@ namespace DecryptNumber
                 "!)(#&%(*@#%"
             };
 
-
             foreach (var crypted in cryptedNumbers)
             {
-                long sum = 0;
-                foreach (char c in crypted)
-                {
-                    int value = GetCharacterValue(c);
-                    sum = sum * 10 + value;
-                }
-
+                long sum = crypted.Aggregate(0L, (currentSum, c) => currentSum * 10 + GetCharacterValue(c));
                 Console.WriteLine($"Crypted: {crypted}, Decrypted number: {sum}");
             }
         }
 
         static int GetCharacterValue(char c)
         {
-            switch (c)
+            return c switch
             {
-                case '!': return 1;
-                case '@': return 2;
-                case '#': return 3;
-                case '$': return 4;
-                case '%': return 5;
-                case '^': return 6;
-                case '&': return 7;
-                case '*': return 8;
-                case '(': return 9;
-                case ')': return 0;
-                default: return 0;
-            }
+                '!' => 1,
+                '@' => 2,
+                '#' => 3,
+                '$' => 4,
+                '%' => 5,
+                '^' => 6,
+                '&' => 7,
+                '*' => 8,
+                '(' => 9,
+                ')' => 0,
+                _ => 0
+            };
         }
     }
 }
