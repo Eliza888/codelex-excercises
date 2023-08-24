@@ -7,7 +7,7 @@ namespace MakeSounds
     {
         public void PlaySound()
         {
-            Console.WriteLine("whoosh-bang");
+            Console.WriteLine("Fireworks go whoosh-bang!");
         }
     }
 }

@@ -18,11 +18,13 @@ namespace VendingMachine
             VendingMachine vendingMachine = new VendingMachine("Example Manufacturer", initialProducts);
 
             Console.WriteLine("Welcome to the Vending Machine! I accept only: 0.10, 0.20, 0.50, 1.00, 2.00 coins!");
+            
             DisplayProducts(vendingMachine);
 
             while (true)
             {
                 Console.WriteLine("Enter the name of the product you want to buy (or 'exit' to quit):");
+                
                 string productName = Console.ReadLine();
 
                 if (productName.ToLower() == "exit")
@@ -91,7 +93,6 @@ namespace VendingMachine
                 }
             }
         }
-
 
         static void DisplayProducts(IVendingMachine vendingMachine)
         {

@@ -14,14 +14,13 @@ namespace Hierarchy
 
         public override void MakeSound()
         {
-            Console.WriteLine("> Meowwww");
+            Console.WriteLine("> Meeeooow");
         }
 
         public override bool WillEatFood(Food food)
         {
             return true;
         }
-
 
         public override string ToString()
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Hierarchy
 {
     abstract class Food

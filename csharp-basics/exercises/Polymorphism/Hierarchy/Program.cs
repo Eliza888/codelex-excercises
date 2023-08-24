@@ -76,7 +76,7 @@ namespace Hierarchy
 
                     string foodType = foodChoices[foodSelection];
 
-                    Food food = CreateFood(foodType, 1); // Quantity is not needed
+                    Food food = CreateFood(foodType, 1);
 
                     if (food != null && animal is Tiger tiger && !tiger.WillEatFood(food))
                     {

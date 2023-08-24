@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Hierarchy
 {
     abstract class Mammal : Animal

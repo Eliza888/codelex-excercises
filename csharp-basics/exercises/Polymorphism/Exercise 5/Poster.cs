@@ -11,7 +11,7 @@ namespace Exercise_5
         private double dimensions;
         private int copies;
         private double costPerCopy;
-
+        
         public Poster(double baseCost, double dimensions, int copies, double costPerCopy) : base(baseCost)
         {
             this.dimensions = dimensions;

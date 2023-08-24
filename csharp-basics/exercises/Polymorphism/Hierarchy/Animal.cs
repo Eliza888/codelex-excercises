@@ -29,9 +29,7 @@ namespace Hierarchy
 
         public override string ToString()
         {
-            return $"{AnimalType}[{AnimalName}, {AnimalWeight.ToString("0.##", CultureInfo.InvariantCulture)}, {FoodEaten}]";
+            return $"{AnimalType}[{AnimalName}, {AnimalWeight.ToString("0.00", CultureInfo.InvariantCulture)}, {FoodEaten}]";
         }
-    }
-
-    
+    }  
 }

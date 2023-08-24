@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.ConstrainedExecution;
+using System.Runtime.Intrinsics.X86;
 
 namespace DragRace
 {
@@ -23,14 +26,15 @@ namespace DragRace
                 foreach (var car in cars)
                 {
                     car.SpeedUp();
-                    car.ShowCurrentSpeed();
+                    Console.WriteLine($"{car.GetType().Name} - Current Speed: {car.ShowCurrentSpeed()}");
+
                     if (i == 3 && car is INitrous boostableCar)
                     {
                         boostableCar.UseNitrousOxideEngine();
+                        Console.WriteLine($"{car.GetType().Name} used nitrous!");
                     }
                 }
             }
-
             int maxSpeed = 0;
             string fastestCarName = "";
             foreach (var car in cars)

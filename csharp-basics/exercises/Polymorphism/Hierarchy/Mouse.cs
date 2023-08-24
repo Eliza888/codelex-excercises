@@ -19,11 +19,9 @@ namespace Hierarchy
             return food is Vegetable;
         }
 
-
         public override string ToString()
         {
             return $"{GetType().Name}[{base.ToString()}]";
         }
     }
 }
-
