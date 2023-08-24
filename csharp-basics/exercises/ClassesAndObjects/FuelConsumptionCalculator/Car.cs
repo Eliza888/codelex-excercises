@@ -30,11 +30,7 @@ namespace FuelConsumptionCalculator
 
         public double CalculateConsumption()
         {
-            if (endKilometers == startKilometers)
-            {
-                return 0.0;
-            }
-            return (liters / (endKilometers - startKilometers)) * 100;
+            return endKilometers == startKilometers ? 0.0 : (liters / (endKilometers - startKilometers)) * 100;
         }
 
         public bool IsGasHog()

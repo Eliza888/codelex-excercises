@@ -17,9 +17,14 @@ namespace VideoStore
             Inventory.Add(new Video(title));
         }
 
+        private Video FindVideoByTitle(string title)
+        {
+            return Inventory.Find(v => v.Title == title);
+        }
+
         public bool CheckOutVideo(string title)
         {
-            Video video = Inventory.Find(v => v.Title == title);
+            Video video = FindVideoByTitle(title);
             if (video != null && !video.CheckedOut)
             {
                 return video.CheckOut();
@@ -29,7 +34,7 @@ namespace VideoStore
 
         public bool ReturnVideo(string title)
         {
-            Video video = Inventory.Find(v => v.Title == title);
+            Video video = FindVideoByTitle(title);
             if (video != null && video.CheckedOut)
             {
                 return video.ReturnVideo();
@@ -39,7 +44,7 @@ namespace VideoStore
 
         public void RateVideo(string title, int rating)
         {
-            Video video = Inventory.Find(v => v.Title == title);
+            Video video = FindVideoByTitle(title);
             if (video != null)
             {
                 video.ReceiveRating(rating);

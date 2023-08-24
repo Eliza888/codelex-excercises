@@ -8,34 +8,34 @@ namespace Exercise_7
 {
     class SavingsAccount
     {
-        private double balance;
+        private double _balance;
         private double annualInterestRate;
 
         public SavingsAccount(double startingBalance)
         {
-            balance = startingBalance;
+            _balance = startingBalance;
         }
 
         public void MakeWithdrawal(double amount)
         {
-            balance -= amount;
+            _balance -= amount;
         }
 
         public void MakeDeposit(double amount)
         {
-            balance += amount;
+            _balance += amount;
         }
 
         public void CalculateMonthlyInterest()
         {
             double monthlyInterestRate = annualInterestRate / 12.0;
-            double interestEarned = balance * monthlyInterestRate;
-            balance += interestEarned;
+            double interestEarned = _balance * monthlyInterestRate;
+            _balance += interestEarned;
         }
 
         public double GetBalance()
         {
-            return balance;
+            return _balance;
         }
 
         public void SetAnnualInterestRate(double rate)

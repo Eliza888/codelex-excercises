@@ -36,6 +36,7 @@ namespace Exercise_12
                     correctAnswers++;
                 }
             }
+
             return correctAnswers;
         }
     }

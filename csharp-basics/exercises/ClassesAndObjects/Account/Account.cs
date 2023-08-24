@@ -2,13 +2,13 @@
 {
     class Account
     {
-        private string accountName;
+        private string _accountName;
         private double balance;
 
         public Account(string accountName, double initialBalance)
         {
-            this.accountName = accountName;
-            this.balance = initialBalance;
+            _accountName = accountName;
+            balance = initialBalance;
         }
 
         public void Deposit(double amount)
@@ -36,13 +36,7 @@
 
         public override string ToString()
         {
-            return $"{accountName} balance: {balance.ToString("0.00")}";
-        }
-
-        public static void Transfer(Account from, Account to, double howMuch)
-        {
-            from.Withdrawal(howMuch);
-            to.Deposit(howMuch);
+            return $"{_accountName} balance: {balance.ToString("0.00")}";
         }
     }
 }

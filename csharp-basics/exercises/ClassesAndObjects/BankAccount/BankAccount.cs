@@ -17,25 +17,13 @@ namespace BankAccount
             Name = name;
             Balance = balance;
         }
-
         public string ShowUserNameAndBalance()
         {
-            string fixedBalance;
+            int dollars = (int)Math.Abs(Balance);
+            int cents = (int)(Math.Abs(Balance) * 100) % 100;
+            string balanceFormatted = $"{(Balance >= 0 ? "$" : "$")}{dollars}.{(cents < 10 ? "0" : "")}{cents}";
 
-            if (Balance >= 0)
-            {
-                int dollars = (int)Balance;
-                int cents = (int)((Balance - dollars) * 100);
-                fixedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
-            }
-            else
-            {
-                int dollars = (int)(-Balance);
-                int cents = (int)((-Balance - dollars) * 100);
-                fixedBalance = "$" + dollars + "." + (cents < 10 ? "0" + cents : cents.ToString());
-            }
-
-            return Name + ", " + fixedBalance;
+            return $"{Name}, {balanceFormatted}";
         }
     }
 }

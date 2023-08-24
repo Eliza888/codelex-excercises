@@ -6,13 +6,13 @@ namespace VideoStore
     {
         public string Title { get; }
         public bool CheckedOut { get; private set; }
-        private List<int> Ratings;
+        private List<int> _ratings;
 
         public Video(string title)
         {
             Title = title;
             CheckedOut = false;
-            Ratings = new List<int>();
+            _ratings = new List<int>();
         }
 
         public bool CheckOut()
@@ -37,20 +37,21 @@ namespace VideoStore
 
         public void ReceiveRating(int rating)
         {
-            Ratings.Add(rating);
+            _ratings.Add(rating);
         }
 
         public double GetAverageRating()
         {
-            if (Ratings.Count == 0)
+            if (_ratings.Count == 0)
                 return 0;
 
             double sum = 0;
-            foreach (int rating in Ratings)
+            foreach (int rating in _ratings)
             {
                 sum += rating;
             }
-            return sum / Ratings.Count;
+            
+            return sum / _ratings.Count;
         }
     }
 }
