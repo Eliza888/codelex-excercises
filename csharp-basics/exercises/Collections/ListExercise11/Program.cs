@@ -1,22 +1,40 @@
-﻿namespace ListExercise11
+﻿using System.Collections.Generic;
+using System;
+
+namespace ListExercise11
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            List<string> fruits = new List<string>();
 
-            //TODO: Add 10 values to list
+            fruits.Add("Apple");
+            fruits.Add("Banana");
+            fruits.Add("Orange");
+            fruits.Add("Grapes");
+            fruits.Add("Mango");
+            fruits.Add("Pineapple");
+            fruits.Add("Strawberry");
+            fruits.Add("Cherry");
+            fruits.Add("Watermelon");
+            fruits.Add("Kiwi");
 
-            //TODO: Add new value at 5th position
+            fruits.Insert(4, "Pear");
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            int lastIndex = fruits.Count - 1;
+            fruits[lastIndex] = "Peach";
 
-            //TODO: Sort your list in alphabetical order
+            fruits.Sort();
 
-            //TODO: Check if your list contains "Foobar" element
+            bool containsFoobar = fruits.Contains("Foobar");
+            Console.WriteLine($"Does the list contain 'Foobar'? {containsFoobar}");
 
-            //TODO: Print each element of list using loop
+            Console.WriteLine("Fruits list:");
+            foreach (var fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
         }
     }
 }

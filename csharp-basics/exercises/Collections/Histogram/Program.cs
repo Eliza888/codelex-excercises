@@ -1,18 +1,50 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Histogram
 {
     class Program
     {
-        private const string Path = "../Histogram/midtermscores.txt";
+        private const string Path = "../../../midtermscores.txt";
 
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var readText = File.ReadAllLines(Path);
-            foreach (var s in readText)
+            string[] readText = File.ReadAllText(Path).Split(' ');
+            Dictionary<int, int> scoreCounts = new Dictionary<int, int>();
+
+            for (int i = 0; i <= 100; i += 10)
             {
-                Console.WriteLine(s);
+                scoreCounts[i] = 0;
+            }
+
+            foreach (string s in readText)
+            {
+                if (int.TryParse(s, out int score))
+                {
+                    if (score >= 0 && score <= 100)
+                    {
+                        int rangeIndex = score / 10 * 10;
+                        scoreCounts[rangeIndex]++;
+                    }
+                }
+            }
+
+            for (int i = 0; i <= 100; i += 10)
+            {
+                int upperBound = i + 9;
+                Console.Write(i.ToString("00") + "-" + upperBound.ToString("00") + ": ");
+
+                if (scoreCounts.ContainsKey(i))
+                {
+                    int count = scoreCounts[i];
+                    for (int j = 0; j < count; j++)
+                    {
+                        Console.Write("*");
+                    }
+                }
+
+                Console.WriteLine();
             }
         }
     }
