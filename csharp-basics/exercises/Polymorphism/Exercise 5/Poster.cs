@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class Poster : Program
+    class Poster : Advert
     {
         private double dimensions;
         private int copies;

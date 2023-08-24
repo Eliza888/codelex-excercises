@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class NewspaperAd : Program
+    class NewspaperAd : Advert
     {
         private double columnCm;
 

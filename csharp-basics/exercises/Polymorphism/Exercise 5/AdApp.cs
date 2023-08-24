@@ -4,7 +4,7 @@ class AdApp
 {
     static void Main(string[] args)
     {
-        Program[] programs = new Program[]
+        Advert[] programs = new Advert[]
         {
             new Hoarding(100, 7, true),
             new NewspaperAd(10, 30),

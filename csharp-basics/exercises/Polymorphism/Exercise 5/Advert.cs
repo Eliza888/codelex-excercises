@@ -1,10 +1,10 @@
 ﻿namespace Exercise_5
 {
-    class Program
+    class Advert
     {
         protected double baseCost;
 
-        public Program(double baseCost)
+        public Advert(double baseCost)
         {
             this.baseCost = baseCost;
         }

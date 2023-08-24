@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class Hoarding : Program
+    class Hoarding : Advert
     {
         private int days;
         private bool primeLocation;

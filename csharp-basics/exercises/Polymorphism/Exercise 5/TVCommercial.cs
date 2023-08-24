@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    class TVCommercial : Program
+    class TVCommercial : Advert
     {
         private double seconds;
         private bool peakTime;
