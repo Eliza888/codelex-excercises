@@ -3,11 +3,12 @@ namespace Firm
     public class Hourly : Employee
     {
         private int _hoursWorked;
+
         //-----------------------------------------------------------------
         // Sets up this hourly employee using the specified information.
         //-----------------------------------------------------------------
-        public Hourly(string eName, string eAddress, string ePhone, string socSecNumber, double rate) : base(eName,
-            eAddress, ePhone, socSecNumber, rate)
+        public Hourly(string eName, string eAddress, string ePhone, string socSecNumber, double rate)
+            : base(eName, eAddress, ePhone, socSecNumber, rate)
         {
             _hoursWorked = 0;
         }
@@ -24,9 +25,9 @@ namespace Firm
         //-----------------------------------------------------------------
         // Computes and returns the pay for this hourly employee.
         //-----------------------------------------------------------------
-        public override double Pay() 
-
-            var payment = payRate * _hoursWorked;
+        public override double Pay()
+        {
+            var payment = _payRate * _hoursWorked; // Use _payRate instead of payRate
             _hoursWorked = 0;
             return payment;
         }
@@ -34,10 +35,10 @@ namespace Firm
         //-----------------------------------------------------------------
         // Returns information about this hourly employee as a string.
         //-----------------------------------------------------------------
-        public override string ToString() 
+        public override string ToString()
         {
             var result = base.ToString();
-            result += "\nCurrent hours: " + _hoursWorked;
+            result += "Current hours: " + _hoursWorked;
             return result;
         }
     }
