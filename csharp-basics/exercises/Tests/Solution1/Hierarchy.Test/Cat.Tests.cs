@@ -6,14 +6,11 @@ namespace Hierarchy.Tests
         [TestMethod]
         public void Animal_Eat_ShouldIncreaseFoodEaten()
         {
-            // Arrange
             var animal = new Cat("TestCat", 1.0, "Home", "Persian");
             var food = new Meat(2);
 
-            // Act
             animal.Eat(food);
 
-            // Assert
             Assert.AreEqual(2, animal.FoodEaten);
         }
 
@@ -21,28 +18,22 @@ namespace Hierarchy.Tests
         [TestMethod]
         public void Cat_WillEatFood_ShouldReturnTrueForMeat()
         {
-            // Arrange
             var cat = new Cat("TestCat", 1.0, "Home", "Persian");
             var food = new Meat(1);
 
-            // Act
             var result = cat.WillEatFood(food);
 
-            // Assert
             Assert.IsTrue(result);
         }
 
         [TestMethod]
         public void Cat_WillEatFood_ShouldReturnTrueForVegetable()
         {
-            // Arrange
             var cat = new Cat("TestCat", 1.0, "Home", "Persian");
             var food = new Vegetable(1);
 
-            // Act
             var result = cat.WillEatFood(food);
 
-            // Assert
             Assert.IsTrue(result);
         }
 
