@@ -52,5 +52,27 @@ namespace Hierarchy.Tests
                 Assert.AreEqual("> Meeeooow", consoleOutput);
             }
         }
+
+        [TestMethod]
+        public void Cat_ToString_ShouldReturnExpectedString()
+        {
+            var cat = new Cat("Gray", 1.10, "Home", "Persian");
+
+            string expectedString = "Cat Gray 1,10 Home Persian"; 
+            string actualString = cat.ToString();
+
+            Assert.AreEqual(expectedString, actualString);
+        }
+
+        [TestMethod]
+        public void Cat_CatBreed_ShouldReturnExpectedValue()
+        {
+            var cat = new Cat("TestCat", 1.0, "Home", "Persian");
+
+            string catBreed = cat.CatBreed;
+
+            string expectedCatBreed = "Persian";
+            Assert.AreEqual(expectedCatBreed, catBreed);
+        }
     }
 }

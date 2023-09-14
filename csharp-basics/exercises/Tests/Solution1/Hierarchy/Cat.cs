@@ -24,7 +24,7 @@ namespace Hierarchy
 
         public override string ToString()
         {
-            return $"{GetType().Name}[{base.ToString()}]";
+            return $"Cat {AnimalName} {AnimalWeight.ToString("0.00")} {LivingRegion} {CatBreed}";
         }
     }
 }

@@ -51,5 +51,18 @@
                 Assert.AreEqual("> Squeak", consoleOutput);
             }
         }
+
+        [TestMethod]
+        public void Mouse_ToString_ShouldReturnExpectedString()
+        {
+            var mouse = new Mouse("Squeaky", 0.1, "Field");
+
+            string
+                expectedString =
+                    "Mouse Squeaky 0.10 Field"; 
+            string actualString = mouse.ToString();
+
+            Assert.AreEqual(expectedString, actualString);
+        }
     }
 }

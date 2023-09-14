@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Hierarchy
 {
@@ -19,10 +20,9 @@ namespace Hierarchy
             return food is Meat;
         }
 
-
         public override string ToString()
         {
-            return $"{GetType().Name}[{base.ToString()}]";
+            return $"{GetType().Name} {AnimalName} {AnimalWeight.ToString("0.00", CultureInfo.InvariantCulture)} {LivingRegion}";
         }
     }
 }

@@ -51,5 +51,15 @@
                 Assert.AreEqual("> Zeeebra", consoleOutput);
             }
         }
+        [TestMethod]
+        public void Zebra_ToString_ShouldReturnExpectedString()
+        {
+            var zebra = new Zebra("Stripes", 400.5, "Savannah");
+
+            string expectedString = "Zebra Stripes 400.50 Savannah"; 
+            string actualString = zebra.ToString();
+
+            Assert.AreEqual(expectedString, actualString);
+        }
     }
 }

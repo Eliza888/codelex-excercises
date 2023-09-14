@@ -51,5 +51,16 @@
                 Assert.AreEqual("> ROAAR!!!", consoleOutput);
             }
         }
+
+        [TestMethod]
+        public void Tiger_ToString_ShouldReturnExpectedString()
+        {
+            var tiger = new Tiger("Typcho", 167.7, "Asia");
+
+            string expectedString = "Tiger Typcho 167.70 Asia";
+            string actualString = tiger.ToString();
+
+            Assert.AreEqual(expectedString, actualString);
+        }
     }
 }
